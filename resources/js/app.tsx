@@ -1,11 +1,13 @@
 import "./bootstrap";
+import '../css/app.css';
 
 import { createRoot } from "react-dom/client";
+import { HelloWorld } from './Components/SampleComponent';
 
 export default function App() {
     return (
-        <div>
-            <h1>Hello, World!</h1>
+        <div className="bg-black text-white">
+            <HelloWorld />
         </div>
     );
 }
