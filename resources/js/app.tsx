@@ -1,15 +1,19 @@
-import "./bootstrap";
+import './bootstrap';
 import '../css/app.css';
 
-import { createRoot } from "react-dom/client";
-import { HelloWorld } from './Components/SampleComponent';
+import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes';
 
 export default function App() {
-    return (
-        <div className="bg-black text-white">
-            <HelloWorld />
-        </div>
-    );
+  return (
+    <RouterProvider router={router} fallbackElement={<p>Initial Load...</p>} />
+  );
 }
 
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
