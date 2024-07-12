@@ -11,7 +11,7 @@ export const AuthenticatedLayout = () => {
           <Link to="/users">Users | </Link>
         </li>
         <li>
-          <Link to="/groups">Groups</Link>
+          <Link to="/teams">Teams</Link>
         </li>
       </ul>
 
